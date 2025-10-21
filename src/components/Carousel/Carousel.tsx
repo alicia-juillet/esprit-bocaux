@@ -6,7 +6,6 @@ type Slide = { src: string; alt?: string };
 export default function Carousel({ slides }: { slides: Slide[] }) {
   const [i, setI] = useState(0);
   const max = slides.length;
-
   const prev = () => setI((i) => (i - 1 + max) % max);
   const next = () => setI((i) => (i + 1) % max);
 
