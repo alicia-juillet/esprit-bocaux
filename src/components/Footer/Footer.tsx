@@ -1,4 +1,10 @@
+import "./Footer.scss";
+
 function Footer() {
-  return <p>Lien Facebook</p>;
+  return (
+    <footer className="footer">
+      <p>Lien Facebook</p>;
+    </footer>
+  );
 }
 export default Footer;
