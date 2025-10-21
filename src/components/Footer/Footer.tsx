@@ -3,7 +3,7 @@ import "./Footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <p>Lien Facebook</p>;
+      <p>Lien Facebook</p>
     </footer>
   );
 }
