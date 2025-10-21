@@ -1,0 +1,30 @@
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* bouton | image | bouton */
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.viewport {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  object-fit: cover; /* pas d’étirement ; on rogne si besoin */
+  object-position: center;
+}
+
+.nav {
+  border: none;
+  background: #7f5c48;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}

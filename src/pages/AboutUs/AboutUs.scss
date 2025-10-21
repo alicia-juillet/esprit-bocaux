@@ -1,0 +1,20 @@
+#aboutUs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 60px 40px;
+  flex-direction: row;
+  gap: 100px;
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-us-picture {
+    width: 300px;
+    height: auto;
+    box-shadow: 10px 5px 10px black;
+  }
+}
