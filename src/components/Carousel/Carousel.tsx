@@ -20,11 +20,8 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
   };
 
   return (
-    <div
-      className="carousel"
-      onClickCapture={(e) => e.stopPropagation()}
-      onMouseDownCapture={(e) => e.stopPropagation()}
-    >
+    <div className="carousel">
+      {/* <- plus de onClickCapture ici */}
       <button type="button" className="nav prev" onClick={handlePrev}>
         ‹
       </button>
