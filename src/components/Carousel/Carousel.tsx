@@ -6,12 +6,26 @@ type Slide = { src: string; alt?: string };
 export default function Carousel({ slides }: { slides: Slide[] }) {
   const [i, setI] = useState(0);
   const max = slides.length;
-  const prev = () => setI((i) => (i - 1 + max) % max);
-  const next = () => setI((i) => (i + 1) % max);
+
+  const handlePrev = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setI((x) => (x - 1 + max) % max);
+  };
+
+  const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setI((x) => (x + 1) % max);
+  };
 
   return (
-    <div className="carousel">
-      <button type="button" className="nav prev" onClick={prev}>
+    <div
+      className="carousel"
+      onClickCapture={(e) => e.stopPropagation()}
+      onMouseDownCapture={(e) => e.stopPropagation()}
+    >
+      <button type="button" className="nav prev" onClick={handlePrev}>
         ‹
       </button>
 
@@ -25,7 +39,7 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
         />
       </div>
 
-      <button type="button" className="nav next" onClick={next}>
+      <button type="button" className="nav next" onClick={handleNext}>
         ›
       </button>
     </div>
