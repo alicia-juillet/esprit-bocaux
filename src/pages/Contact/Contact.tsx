@@ -19,8 +19,7 @@ function Contact() {
           <strong>Horaires :</strong>
           <br />
           Du mardi au samedi <br />
-          10h00 – 14h00 <br />
-          16h00 – 19h30
+          10h00 – 19h00
         </p>
 
         <p>
