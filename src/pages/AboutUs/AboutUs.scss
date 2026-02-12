@@ -3,76 +3,125 @@
   justify-content: center;
   width: 100%;
   align-items: center;
-  padding: 60px 40px;
+  padding: 90px 40px;
   flex-direction: row;
   gap: 100px;
   font-size: 18px;
+}
 
-  .about-us {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    line-height: 1.75;
+/* ========================= */
+/* Encadré principal */
+/* ========================= */
 
-    /* ✅ encadré */
-    background: rgba(255, 255, 255, 0.9);
-    padding: 36px 40px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+.about-us {
+  position: relative; /* nécessaire pour la barre */
+  display: flex;
+  flex-direction: column;
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.75;
 
-    /* ✅ espacement entre les paragraphes */
-    p {
-      margin: 0 0 18px;
-    }
+  background: rgba(255, 255, 255, 0.96);
+  padding: 42px 44px;
+  border-radius: 18px;
+  border: 1px solid rgba(127, 92, 72, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
 
-    .about__title {
-      margin: 0 0 20px;
-    }
+/* ✨ Barre signature bois → doré */
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7f5c48, #d0ac23);
+}
 
-    .about__subtitle {
-      margin: 18px 0 10px;
-      font-weight: 700;
-    }
+/* ========================= */
+/* Typographie */
+/* ========================= */
 
-    /* ✅ liste plus jolie */
-    .about__list {
-      margin: 0;
-      padding-left: 22px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+.about__title {
+  margin: 0 0 26px;
+  font-size: 30px;
+  color: #7f5c48;
+}
 
-      li {
-        line-height: 1.6;
-      }
-    }
-  }
+.about__subtitle {
+  margin: 24px 0 12px;
+  font-weight: 700;
+  color: #2c231e;
+}
 
-  .about-us-picture {
-    width: 300px;
-    height: auto;
+/* Paragraphes */
+.about-us p {
+  margin: 0 0 20px;
+}
 
-    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35);
+/* ========================= */
+/* Liste */
+/* ========================= */
+
+.about__list {
+  margin: 0;
+  padding-left: 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about__list li {
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* Image */
+/* ========================= */
+
+.about-us-picture {
+  width: 320px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+.about-us-picture:hover {
+  transform: translateY(-4px);
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media (max-width: 992px) {
+  #aboutUs {
+    gap: 60px;
   }
 }
 
-/* ✅ Responsive : sur mobile, image au-dessus, espace réduit */
 @media (max-width: 768px) {
   #aboutUs {
     flex-direction: column;
-    gap: 30px;
-    padding: 40px 20px;
+    gap: 40px;
+    padding: 60px 20px;
+  }
 
-    .about-us {
-      padding: 26px 22px;
-      text-align: left; /* sur mobile c’est plus confortable */
-    }
+  .about-us {
+    padding: 30px 24px;
+    text-align: left; /* plus confortable sur mobile */
+  }
 
-    .about-us-picture {
-      width: min(340px, 100%);
-    }
+  .about__title {
+    font-size: 24px;
+  }
+
+  .about-us-picture {
+    width: min(360px, 100%);
   }
 }
