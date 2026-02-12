@@ -6,15 +6,73 @@
   padding: 60px 40px;
   flex-direction: row;
   gap: 100px;
+  font-size: 18px;
 
   .about-us {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.75;
+
+    /* ✅ encadré */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 36px 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    /* ✅ espacement entre les paragraphes */
+    p {
+      margin: 0 0 18px;
+    }
+
+    .about__title {
+      margin: 0 0 20px;
+    }
+
+    .about__subtitle {
+      margin: 18px 0 10px;
+      font-weight: 700;
+    }
+
+    /* ✅ liste plus jolie */
+    .about__list {
+      margin: 0;
+      padding-left: 22px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+        line-height: 1.6;
+      }
+    }
   }
 
   .about-us-picture {
     width: 300px;
     height: auto;
-    box-shadow: 10px 5px 10px black;
+
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ✅ Responsive : sur mobile, image au-dessus, espace réduit */
+@media (max-width: 768px) {
+  #aboutUs {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+
+    .about-us {
+      padding: 26px 22px;
+      text-align: left; /* sur mobile c’est plus confortable */
+    }
+
+    .about-us-picture {
+      width: min(340px, 100%);
+    }
   }
 }

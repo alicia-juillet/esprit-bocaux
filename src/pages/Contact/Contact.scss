@@ -1,0 +1,94 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  min-height: 70vh;
+}
+
+.contact-box {
+  width: min(580px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 38px 34px;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(127, 92, 72, 0.2);
+
+  text-align: center;
+  line-height: 1.8;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barre dorée en haut */
+.contact-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7f5c48, #d0ac23);
+}
+
+/* Titre principal */
+.contact-box h2 {
+  margin-bottom: 28px;
+  color: #7f5c48;
+  font-size: 26px;
+}
+
+/* Nom */
+.contact-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Sous-titres */
+.section-title {
+  font-weight: 600;
+  color: #7f5c48;
+}
+
+/* Horaires */
+.contact-hours {
+  margin: 22px 0;
+}
+
+/* Liens */
+.contact-box a {
+  color: #7f5c48;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-box a:hover {
+  color: #d0ac23;
+}
+
+/* Réseaux */
+.contact-social {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 20px;
+  }
+
+  .contact-box {
+    padding: 30px 24px;
+  }
+
+  .contact-box h2 {
+    font-size: 22px;
+  }
+}

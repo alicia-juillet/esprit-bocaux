@@ -14,7 +14,7 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 24px;
     }
   }
   a:hover {
@@ -26,5 +26,85 @@
     width: auto;
     height: 300px;
     object-fit: cover;
+  }
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Cacher le menu desktop */
+  .menu .menu-bar {
+    display: none;
+  }
+
+  /* Burger icon */
+  .menu .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin: 20px auto;
+
+    span {
+      width: 30px;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+    }
+  }
+
+  /* === MOBILE MENU DROPDOWN === */
+  .mobile-menu {
+    background: rgba(44, 35, 30, 0.95); /* ou une autre couleur */
+    padding: 40px 0 60px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+  }
+
+  /* Croix */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      width: 32px;
+      height: 3px;
+      background: white;
+      top: 15px;
+      left: 0;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* Liens mobile */
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+
+    a {
+      font-size: 22px;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: #d0ac23;
+      }
+    }
   }
 }
