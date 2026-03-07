@@ -1,32 +1,32 @@
 .producteurs {
   display: flex;
   justify-content: center;
-  padding: 90px 20px;
-  min-height: 70vh;
+  // padding: 90px 20px;
+  // min-height: 70vh;
 }
 
 .producteurs-box {
   width: min(1100px, 100%);
   background: rgba(255, 255, 255, 0.96);
   padding: 42px 38px;
-  border-radius: 18px;
+  // border-radius: 18px;
   border: 1px solid rgba(127, 92, 72, 0.2);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
-.producteurs-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 6px;
-  width: 100%;
-  background: linear-gradient(90deg, #7f5c48, #d0ac23);
-}
+// .producteurs-box::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 6px;
+//   width: 100%;
+//   background: linear-gradient(90deg, #7f5c48, #d0ac23);
+// }
 
-.producteurs-box h1 {
+.product-title {
   text-align: center;
   margin: 0 0 14px;
   color: #7f5c48;
@@ -41,17 +41,16 @@
 }
 
 .producteurs-map {
-  margin: 0 auto 40px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(127, 92, 72, 0.12);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
 }
 
 .producteurs-map img {
-  display: block;
-  width: 100%;
+  width: min(600px, 90%);
   height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .region-block {
@@ -63,6 +62,7 @@
   margin: 0 0 18px;
   color: #7f5c48;
   font-size: 26px;
+  text-align: center;
 }
 
 .region-grid {
@@ -132,10 +132,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .producteurs {
-    padding: 70px 16px;
-  }
-
   .producteurs-box {
     padding: 30px 22px;
   }
@@ -160,5 +156,27 @@
 
   .producer-card__content span {
     display: inline-block;
+  }
+}
+
+// Desktop et tablette large
+@media (min-width: 767px) {
+  .producteurs-box {
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .producteurs-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #7f5c48, #d0ac23);
+  }
+
+  .region-block {
+    flex-direction: column;
   }
 }

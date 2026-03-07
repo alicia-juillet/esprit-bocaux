@@ -1,43 +1,33 @@
-import "./Menu.scss";
-import store from "../../assets/homepage.jpg";
-import canneryImg from "../../assets/cannery.jpg";
-import { NavLink, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import './Menu.scss';
 
 function Menu() {
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const images: Record<string, string> = {
-    "/": store,
-    "/cannery": canneryImg,
-  };
-  const currentImage = images[location.pathname];
-
   return (
-    <nav className="menu">
-      <div
-        className={`burger ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div className="menu-bar">
-        <NavLink to="/">Accueil </NavLink>
-        <NavLink to="/cannery">Conserverie</NavLink>
-        <NavLink to="/product">Producteur en épicerie</NavLink>
-        <NavLink to="/prestations">Prestations</NavLink>
-        <NavLink to="/contact">Nous contacter</NavLink>
-      </div>
-      {isOpen && (
-        <div className="mobile-menu">
-          <div className="close-btn" onClick={() => setIsOpen(false)}>
-            <span></span>
-            <span></span>
-          </div>
+    <>
+      <nav className="menu">
+        <div
+          className={`burger ${isOpen ? 'open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="menu-bar">
+          <NavLink to="/">Accueil </NavLink>
+          <NavLink to="/cannery">Conserverie</NavLink>
+          <NavLink to="/product">Producteur en épicerie</NavLink>
+          <NavLink to="/prestations">Prestations</NavLink>
+          <NavLink to="/contact">Nous contacter</NavLink>
+        </div>
+      </nav>
 
+      <div className={`menu-wrapper ${isOpen ? 'open' : 'hidden'}`}>
+        <div className="menu-content">
           <nav className="mobile-links">
             <NavLink to="/" onClick={() => setIsOpen(false)}>
               Accueil
@@ -48,22 +38,16 @@ function Menu() {
             <NavLink to="/product" onClick={() => setIsOpen(false)}>
               Producteur en épicerie
             </NavLink>
+            <NavLink to="/prestations" onClick={() => setIsOpen(false)}>
+              Prestations
+            </NavLink>
             <NavLink to="/contact" onClick={() => setIsOpen(false)}>
               Nous contacter
             </NavLink>
           </nav>
         </div>
-      )}
-
-      {currentImage && (
-        <img
-          src={currentImage}
-          alt="Conserverie artisanale"
-          className="picture-store
-      "
-        />
-      )}
-    </nav>
+      </div>
+    </>
   );
 }
 

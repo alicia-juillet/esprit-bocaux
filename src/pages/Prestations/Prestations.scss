@@ -19,7 +19,7 @@
 
 /* petite barre "signature" */
 .prestations-box::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -28,17 +28,18 @@
   background: linear-gradient(90deg, #7f5c48, #d0ac23);
 }
 
-.prestations-box h2 {
+.prestations-title {
   margin: 0 0 18px;
   text-align: center;
   color: #7f5c48;
   font-size: 30px;
 }
 
-.prestations-box h3 {
+.prestations-sub-title {
   margin: 26px 0 12px;
   color: #7f5c48;
   font-size: 20px;
+  text-align: center;
 }
 
 .block {
@@ -80,7 +81,7 @@
 }
 
 .chips li::before {
-  content: "•";
+  content: '•';
   position: absolute;
   left: 0;
   top: 0;
@@ -179,17 +180,24 @@
   color: #2c231e;
 }
 
-@media (max-width: 768px) {
-  .chips {
-    grid-template-columns: 1fr;
-  }
+// @media (max-width: 768px) {
+//   .chips {
+//     grid-template-columns: 1fr;
+//   }
 
-  .price-row {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
+//   .price-row {
+//     grid-template-columns: 1fr;
+//     gap: 6px;
+//   }
 
-  .price {
-    justify-self: start;
+//   .price {
+//     justify-self: start;
+//   }
+// }
+
+// Desktop et tablette large
+@media (min-width: 767px) {
+  .price-row > span {
+    text-align: center;
   }
 }

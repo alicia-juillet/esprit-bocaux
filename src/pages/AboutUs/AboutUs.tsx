@@ -1,11 +1,10 @@
-import aboutUs from "../../assets/AboutUs.jpg";
-import "./AboutUs.scss";
+import aboutUs from '../../assets/AboutUs.jpg';
+import './AboutUs.scss';
 
 function AboutUs() {
   return (
-    <section id="aboutUs">
-      <img src={aboutUs} alt="Qui sommes nous" className="about-us-picture" />
-      <div className="about-us">
+    <section className="about-us-section">
+      <div className="main-card">
         <h2 className="about__title">Qui sommes nous?</h2>
         <p>
           Je suis passionnée de cuisine depuis mon enfance. J’ai travaillé
@@ -25,7 +24,7 @@ function AboutUs() {
           l’aventure <strong>Esprit Bocaux</strong>.
         </p>
         <p>
-          Un an plus tard, j’ai créé la boutique <strong>Esprit Bocaux</strong>{" "}
+          Un an plus tard, j’ai créé la boutique <strong>Esprit Bocaux</strong>{' '}
           à Vienne et décidé d’y intégrer une épicerie regroupant tous les
           producteurs rencontrés durant cette année. Ce qui a commencé comme un
           hobby est devenu une véritable passion et aujourd’hui mon métier à
@@ -52,12 +51,13 @@ function AboutUs() {
             recettes
           </li>
           <li>
-            {" "}
+            {' '}
             Des <strong>plats du jour chaque semaine</strong>
           </li>
           <li>Livraison à domicile sur Vienne</li>
         </ul>
       </div>
+      <img src={aboutUs} alt="Qui sommes nous" className="about-us-picture" />
     </section>
   );
 }

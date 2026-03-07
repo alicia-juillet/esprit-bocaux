@@ -1,15 +1,21 @@
-.header {
-  background-image: url("/src/assets/background.jpg");
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.img-container {
+  background-image: url('/src/assets/background.jpg');
   background-size: cover;
   background-position: center;
-  width: 100%;
+  min-height: 100px;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .logo {
-    max-width: 600px;
-    height: auto;
     width: 100%;
+    max-width: 600px;
   }
 }
