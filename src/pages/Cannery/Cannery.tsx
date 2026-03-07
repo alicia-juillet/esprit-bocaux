@@ -1,4 +1,4 @@
-import "./Cannery.scss";
+import './Cannery.scss';
 
 type Item = {
   name: string;
@@ -87,54 +87,54 @@ function CannerySection({
 
 export default function Cannery() {
   const porcOnePerson: Item[] = [
-    { name: "Cassoulet au porc", price: "7€90" },
-    { name: "Cassoulet au canard", price: "9€90" },
-    { name: "Saucisse lentille", price: "8€90" },
-    { name: "Petit salé aux lentilles", price: "8€90" },
-    { name: "Saucisse à la graisse de canard", price: "9€90" },
+    { name: 'Cassoulet au porc', price: '7€90' },
+    { name: 'Cassoulet au canard', price: '9€90' },
+    { name: 'Saucisse lentille', price: '8€90' },
+    { name: 'Petit salé aux lentilles', price: '8€90' },
+    { name: 'Saucisse à la graisse de canard', price: '9€90' },
   ];
 
   const porcTwoPeople: Item[] = [
-    { name: "Porc gras “chiang mai” 🌶️", price: "10€90" },
-    { name: "Rougail saucisse", price: "11€90" },
-    { name: "Joue de porc au cidre", price: "13€90" },
-    { name: "Porc aux pruneaux", price: "10€90" },
+    { name: 'Porc gras “chiang mai” 🌶️', price: '10€90' },
+    { name: 'Rougail saucisse', price: '11€90' },
+    { name: 'Joue de porc au cidre', price: '13€90' },
+    { name: 'Porc aux pruneaux', price: '10€90' },
   ];
 
   const volailleOnePerson: Item[] = [
-    { name: "Tajine au poulet", price: "9€90" },
+    { name: 'Tajine au poulet', price: '9€90' },
   ];
 
   const volailleTwoPeople: Item[] = [
-    { name: "Poulet cajun 🌶️", price: "10€90" },
-    { name: "Poulet basquaise", price: "10€90" },
-    { name: "Poulet au curry (déclinaison avec lait de coco)", price: "11€90" },
-    { name: "Carry de poulet au safran", price: "13€90" },
+    { name: 'Poulet cajun 🌶️', price: '10€90' },
+    { name: 'Poulet basquaise', price: '10€90' },
+    { name: 'Poulet au curry (déclinaison avec lait de coco)', price: '11€90' },
+    { name: 'Carry de poulet au safran', price: '13€90' },
   ];
 
-  const boeufOnePerson: Item[] = [{ name: "Chili con carne", price: "7€90" }];
+  const boeufOnePerson: Item[] = [{ name: 'Chili con carne', price: '7€90' }];
 
   const boeufTwoPeople: Item[] = [
-    { name: "Bœuf bourguignon", price: "13€90" },
-    { name: "Carbonnade flamande", price: "15€90" },
-    { name: "Sauce bolognaise", price: "6€90" },
-    { name: "Blanquette de veau", price: "12€90" },
-    { name: "Veau marengo", price: "12€90" },
+    { name: 'Bœuf bourguignon', price: '13€90' },
+    { name: 'Carbonnade flamande', price: '15€90' },
+    { name: 'Sauce bolognaise', price: '6€90' },
+    { name: 'Blanquette de veau', price: '12€90' },
+    { name: 'Veau marengo', price: '12€90' },
   ];
 
   const veggieMain: Item[] = [
-    { name: "Lentilles à la tomate", price: "3€90" },
-    { name: "Ratatouille", price: "3€90" },
-    { name: "Mogette à l’auvergnate", price: "3€90" },
+    { name: 'Lentilles à la tomate', price: '3€90' },
+    { name: 'Ratatouille', price: '3€90' },
+    { name: 'Mogette à l’auvergnate', price: '3€90' },
   ];
 
   const veggieFestive: Item[] = [
-    { name: "Foie gras de canard au calvados", price: "22€50" },
+    { name: 'Foie gras de canard au calvados', price: '22€50' },
   ];
 
   return (
-    <section className="cannery">
-      <div className="cannery-box">
+    <section className="cannery-section">
+      <div className="main-card">
         <h1>Conserverie artisanale</h1>
         <p className="cannery-intro">
           Retrouvez ici notre sélection de bocaux artisanaux, préparés avec soin

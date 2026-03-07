@@ -1,14 +1,16 @@
-import "./Prestations.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import './Prestations.scss';
 
 export default function Prestations() {
   return (
-    <section className="prestations">
-      <div className="prestations-box">
-        <h2>Nos prestations traiteur</h2>
+    <section className="prestations-section">
+      <div className="main-card">
+        <h1>Nos prestations traiteur</h1>
 
         {/* 1) Traiteur */}
-        <h3>1) Prestations traiteur — entrées, plats & desserts</h3>
+        <h3 className="prestations-sub-title">
+          1) Prestations traiteur — entrées, plats & desserts
+        </h3>
 
         <div className="block">
           <h4>Entrées de saison</h4>
@@ -28,7 +30,7 @@ export default function Prestations() {
               hautement qualitatifs
             </li>
             <li>
-              Accompagné d’un féculent au choix{" "}
+              Accompagné d’un féculent au choix{' '}
               <strong>(+ 1 € / personne)</strong>
             </li>
           </ul>
@@ -47,7 +49,7 @@ export default function Prestations() {
         <hr className="sep" />
 
         {/* 2) Apéro */}
-        <h3>2) Apéritifs & plateaux apéro</h3>
+        <h3 className="prestations-sub-title">2) Apéritifs & plateaux apéro</h3>
 
         <p className="lead">
           Découvrez nos plateaux apéritifs artisanaux, composés de fromages,
@@ -123,7 +125,7 @@ export default function Prestations() {
             découvrir la qualité de nos produits.
           </p>
           <p>
-            Pour tout complément d’information ou pour établir un{" "}
+            Pour tout complément d’information ou pour établir un{' '}
             <strong>devis personnalisé</strong>, contactez-nous.
           </p>
 

@@ -1,10 +1,10 @@
-import "./Contact.scss";
+import './Contact.scss';
 
 function Contact() {
   return (
-    <section className="contact">
-      <div className="contact-box">
-        <h2>Nous contacter</h2>
+    <section className="contact-section">
+      <div className="main-card contact-card">
+        <h1>Nous contacter</h1>
 
         <p className="contact-name">
           <strong>SARL Esprit Bocaux</strong>
@@ -23,7 +23,7 @@ function Contact() {
         </p>
 
         <p>
-          <strong>Téléphone :</strong>{" "}
+          <strong>Téléphone :</strong>{' '}
           <a href="tel:0769731629">07 69 73 16 29</a>
         </p>
 

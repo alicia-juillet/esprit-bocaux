@@ -1,45 +1,44 @@
-#aboutUs {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  padding: 90px 40px;
-  flex-direction: row;
-  gap: 100px;
-  font-size: 18px;
-}
+// .about-us-section {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   // justify-content: center;
+//   // width: 100%;
+//   // padding: 5%;
+//   // gap: 100px;
+//   // font-size: 18px;
+// }
 
 /* ========================= */
 /* Encadré principal */
 /* ========================= */
 
-.about-us {
-  position: relative; /* nécessaire pour la barre */
-  display: flex;
-  flex-direction: column;
-  max-width: 850px;
-  width: 100%;
+.about-us-card {
+  // position: relative; /* nécessaire pour la barre */
+  // display: flex;
+  // flex-direction: column;
+  // max-width: 850px;
+  // width: 100%;
   text-align: center;
   line-height: 1.75;
 
   background: rgba(255, 255, 255, 0.96);
-  padding: 42px 44px;
-  border-radius: 18px;
+  // padding: 42px 44px;
+  // border-radius: 18px;
   border: 1px solid rgba(127, 92, 72, 0.18);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
-  overflow: hidden;
 }
 
 /* ✨ Barre signature bois → doré */
-.about-us::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 6px;
-  width: 100%;
-  background: linear-gradient(90deg, #7f5c48, #d0ac23);
-}
+// .about-us-card::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 6px;
+//   width: 100%;
+//   background: linear-gradient(90deg, #7f5c48, #d0ac23);
+// }
 
 /* ========================= */
 /* Typographie */
@@ -82,17 +81,20 @@
 /* ========================= */
 /* Image */
 /* ========================= */
+// .img-container {
+//   height: 200px;
+// }
 
 .about-us-picture {
-  width: 320px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.35);
-  transition: 0.3s ease;
-}
-
-.about-us-picture:hover {
-  transform: translateY(-4px);
+  object-fit: cover;
+  width: 100%;
+  max-height: 250px;
+  margin: 15px 0;
+  // width: 320px;
+  // height: auto;
+  // border-radius: 16px;
+  // box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.35);
+  // transition: 0.3s ease;
 }
 
 /* ========================= */
@@ -106,13 +108,13 @@
 }
 
 @media (max-width: 768px) {
-  #aboutUs {
-    flex-direction: column;
-    gap: 40px;
-    padding: 60px 20px;
-  }
+  // #aboutUs {
+  //   flex-direction: column;
+  //   gap: 40px;
+  //   padding: 60px 20px;
+  // }
 
-  .about-us {
+  .about-us-card {
     padding: 30px 24px;
     text-align: left; /* plus confortable sur mobile */
   }
@@ -122,6 +124,30 @@
   }
 
   .about-us-picture {
-    width: min(360px, 100%);
+    // width: min(360px, 100%);
+  }
+}
+
+// Desktop et tablette large
+@media (min-width: 767px) {
+  .about-us-section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-us-picture {
+    width: 320px;
+    border-radius: 16px;
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+    max-height: initial;
+    margin: 0;
+  }
+
+  .about-us-picture:hover {
+    transform: translateY(-4px);
   }
 }

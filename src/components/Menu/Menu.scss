@@ -1,9 +1,7 @@
 .menu {
   display: flex;
   justify-content: center;
-  background-image: url("/src/assets/background.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url('/src/assets/background.jpg');
   flex-direction: column;
 
   .menu-bar {
@@ -22,14 +20,12 @@
     cursor: pointer;
   }
 
-  .picture-store {
-    width: auto;
-    height: 300px;
-    object-fit: cover;
-  }
   .burger {
     display: none;
   }
+}
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -55,13 +51,48 @@
   }
 
   /* === MOBILE MENU DROPDOWN === */
-  .mobile-menu {
-    background: rgba(44, 35, 30, 0.95); /* ou une autre couleur */
-    padding: 40px 0 60px;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    z-index: 2000;
+  /* --- 1. Le conteneur qui s'anime (déroulement) --- */
+  .menu-wrapper {
+    display: grid;
+    grid-template-rows: 0fr; /* Par défaut, hauteur à 0 */
+    transition: grid-template-rows 0.4s ease-out; /* Durée et fluidité */
+    background-image: url('/src/assets/background.jpg');
+  }
+
+  /* --- 2. Le contenu à l'intérieur --- */
+  .menu-content {
+    overflow: hidden; /* OBLIGATOIRE : cache le texte quand la hauteur est à 0 */
+    opacity: 0; /* On cache aussi visuellement pour un effet de fondu */
+    transition: opacity 0.3s ease-out; /* L'opacité s'animera légèrement plus vite */
+
+    /* Un peu d'espacement pour que ce soit joli une fois ouvert */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* --- 3. L'état OUVERT --- */
+  .menu-wrapper.open {
+    grid-template-rows: 1fr; /* Le menu prend la hauteur de son contenu */
+  }
+
+  .menu-wrapper.open .menu-content {
+    opacity: 1; /* Le texte apparaît en fondu */
+    padding-top: 20px; /* On remet les marges intérieures (ajustez selon votre design) */
+    padding-bottom: 20px;
+  }
+
+  /* Styles basiques pour les liens (pour correspondre à votre image) */
+  .menu-content nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
   }
 
   /* Croix */
@@ -95,7 +126,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 40px;
+    // margin-top: 40px;
 
     a {
       font-size: 22px;
