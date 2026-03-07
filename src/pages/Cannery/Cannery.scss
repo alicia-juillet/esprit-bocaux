@@ -1,0 +1,167 @@
+.cannery {
+  display: flex;
+  justify-content: center;
+  padding: 90px 20px;
+  min-height: 70vh;
+}
+
+.cannery-box {
+  width: min(1000px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 42px 38px;
+  border-radius: 18px;
+  border: 1px solid rgba(127, 92, 72, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.cannery-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7f5c48, #d0ac23);
+}
+
+.cannery-box h1 {
+  text-align: center;
+  margin: 0 0 14px;
+  color: #7f5c48;
+  font-size: 32px;
+}
+
+.cannery-intro {
+  text-align: center;
+  margin: 0 0 34px;
+  line-height: 1.7;
+}
+
+.cannery-card {
+  padding: 28px 0;
+  border-top: 1px solid rgba(127, 92, 72, 0.18);
+}
+
+.cannery-card:first-of-type {
+  border-top: none;
+  padding-top: 10px;
+}
+
+.cannery-card__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cannery-card__header h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #7f5c48;
+}
+
+.cannery-card__subtitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.cannery-card__source {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.cannery-block {
+  margin-top: 22px;
+}
+
+.cannery-block h3 {
+  margin: 0 0 12px;
+  color: #2c231e;
+  font-size: 22px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.cannery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cannery-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(127, 92, 72, 0.14);
+}
+
+.cannery-row:last-child {
+  border-bottom: none;
+}
+
+.cannery-row__name {
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.6;
+}
+
+.cannery-row__name::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d0ac23;
+  font-weight: 700;
+}
+
+.cannery-row__price {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #2c231e;
+}
+
+.cannery-card__note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(127, 92, 72, 0.06);
+  border: 1px solid rgba(127, 92, 72, 0.12);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cannery {
+    padding: 70px 16px;
+  }
+
+  .cannery-box {
+    padding: 30px 22px;
+  }
+
+  .cannery-box h1 {
+    font-size: 26px;
+  }
+
+  .cannery-card__header h2 {
+    font-size: 24px;
+  }
+
+  .cannery-block h3 {
+    font-size: 20px;
+  }
+
+  .cannery-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .cannery-row__price {
+    justify-self: start;
+    padding-left: 16px;
+  }
+}
