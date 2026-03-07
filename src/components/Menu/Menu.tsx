@@ -1,7 +1,6 @@
 import "./Menu.scss";
 import store from "../../assets/homepage.jpg";
 import canneryImg from "../../assets/cannery.jpg";
-import productImg from "../../assets/product.jpg";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -12,7 +11,6 @@ function Menu() {
   const images: Record<string, string> = {
     "/": store,
     "/cannery": canneryImg,
-    "/product": productImg,
   };
   const currentImage = images[location.pathname];
 
