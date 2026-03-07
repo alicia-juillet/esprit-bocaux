@@ -1,0 +1,164 @@
+.producteurs {
+  display: flex;
+  justify-content: center;
+  padding: 90px 20px;
+  min-height: 70vh;
+}
+
+.producteurs-box {
+  width: min(1100px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 42px 38px;
+  border-radius: 18px;
+  border: 1px solid rgba(127, 92, 72, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.producteurs-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7f5c48, #d0ac23);
+}
+
+.producteurs-box h1 {
+  text-align: center;
+  margin: 0 0 14px;
+  color: #7f5c48;
+  font-size: 32px;
+}
+
+.producteurs-intro {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.producteurs-map {
+  margin: 0 auto 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(127, 92, 72, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.producteurs-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.region-block {
+  padding: 28px 0;
+  border-top: 1px solid rgba(127, 92, 72, 0.18);
+}
+
+.region-block h2 {
+  margin: 0 0 18px;
+  color: #7f5c48;
+  font-size: 26px;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.producer-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(127, 92, 72, 0.05);
+  border: 1px solid rgba(127, 92, 72, 0.12);
+}
+
+.producer-card__logo {
+  flex-shrink: 0;
+  width: 74px;
+  height: 74px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(127, 92, 72, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producer-card__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.producer-card__fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #7f5c48;
+  background: rgba(208, 172, 35, 0.12);
+}
+
+.producer-card__content h4 {
+  margin: 0 0 6px;
+  color: #2c231e;
+  font-size: 18px;
+}
+
+.producer-card__content p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+.producer-card__content span {
+  font-size: 14px;
+  color: #7f5c48;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .producteurs {
+    padding: 70px 16px;
+  }
+
+  .producteurs-box {
+    padding: 30px 22px;
+  }
+
+  .producteurs-box h1 {
+    font-size: 26px;
+  }
+
+  .region-block h2 {
+    font-size: 22px;
+  }
+
+  .region-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .producer-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .producer-card__content span {
+    display: inline-block;
+  }
+}

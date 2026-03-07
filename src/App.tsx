@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Cannery from "./pages/Cannery/Cannery";
 import Contact from "./pages/Contact/Contact";
 import Prestations from "./pages/Prestations/Prestations";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/cannery" element={<Cannery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/prestations" element={<Prestations />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </main>
       <Footer />
