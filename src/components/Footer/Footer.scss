@@ -1,5 +1,5 @@
 .footer {
-  background-image: url('/src/assets/background.jpg');
+  background-image: url("/src/assets/background.jpg");
   background-size: cover;
   background-position: center;
 
@@ -14,7 +14,7 @@
 
 /* voile sombre pour lisibilité */
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
@@ -35,14 +35,15 @@
 
 .footer-content h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   color: #d0ac23;
 }
 
 .footer-tagline {
   margin: 0;
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .footer-social {
@@ -69,12 +70,13 @@
 }
 
 .footer-social a:hover {
-  background: #d0ac23;
+  background: #ddbc36;
   transform: translateY(-2px);
 }
 
 .footer-copy {
   margin-top: 8px;
-  font-size: 13px;
-  opacity: 0.7;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
 }
