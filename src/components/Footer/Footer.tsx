@@ -16,6 +16,7 @@ function Footer() {
             href="https://www.facebook.com/profile.php?id=61555897739691"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook Esprit Bocaux"
           >
             <FaFacebookF />
           </a>
@@ -24,6 +25,7 @@ function Footer() {
             href="https://www.instagram.com/esprit_bocaux"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram Esprit Bocaux"
           >
             <FaInstagram />
           </a>
